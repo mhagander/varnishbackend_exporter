@@ -43,17 +43,17 @@ Any backend not being matched by the regexp will be labeled as `unknown`.
 
 ## Usage
 
-  -directorre string
-    	Regular expression extracting director name from backend name
-  -varnish.interval int
-    	Varnish checking interval (default 15)
-  -varnish.port int
-    	Port of Varnish to connect to (default 6082)
-  -varnish.secret string
-    	Filename of varnish secret file (default "/etc/varnish/secret")
-  -version
-    	Print version information.
-  -web.listen-address string
-    	Address to listen on for web interface and telemetry. (default ":9133")
-  -web.telemetry-path string
-    	Path under which to expose metrics. (default "/metrics")
+    -directorre string
+      	Regular expression extracting director name from backend name
+    -varnish.interval int
+      	Varnish checking interval (default 15)
+    -varnish.port int
+      	Port of Varnish to connect to (default 6082)
+    -varnish.secret string
+      	Filename of varnish secret file (default "/etc/varnish/secret")
+    -version
+      	Print version information.
+    -web.listen-address string
+      	Address to listen on for web interface and telemetry. (default ":9133")
+    -web.telemetry-path string
+      	Path under which to expose metrics. (default "/metrics")
