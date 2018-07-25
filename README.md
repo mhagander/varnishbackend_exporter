@@ -51,6 +51,9 @@ Any backend not being matched by the regexp will be labeled as `unknown`.
       	Port of Varnish to connect to (default 6082)
     -varnish.secret string
       	Filename of varnish secret file (default "/etc/varnish/secret")
+    -varnish.reset
+      	Reset backend information in between scans. (default false)
+      	This prevents reporting on removed backends.
     -version
       	Print version information.
     -web.listen-address string
