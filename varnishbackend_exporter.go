@@ -112,6 +112,7 @@ func main() {
 		varnishInterval = flag.Int("varnish.interval", 15, "Varnish checking interval")
 		directorReStr   = flag.String("directorre", "", "Regular expression extracting director name from backend name")
 		showVersion     = flag.Bool("version", false, "Print version information.")
+		resetBackends   = flag.Bool("varnish.reset", false, "Reset the backends list after each scan.")
 	)
 	flag.Parse()
 
@@ -239,6 +240,11 @@ func main() {
 					}
 				}
 			}
+
+			if *resetBackends {
+				prombackends.Reset()
+			}
+
 			if directorRegexp != nil {
 				for k := range labelall {
 					prombackends.With(prometheus.Labels{"state": "healthy", "director": k}).Set(float64(labelhealthy[k]))
